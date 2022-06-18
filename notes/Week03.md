@@ -94,10 +94,12 @@ Make a prediction given new $x$: $h_\theta(x) = \frac{1}{1-e^{x^T\theta}}$
 
 ### Gradient Desent
 Use Gradient Desent and repeatedly update $\theta$
+
 We want to minimize $J(\theta)$ :
+
 Repeat $\{$
 $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$ 
-$\}$ (Simultaneously update all $\theta_j$
+$\}$ (Simultaneously update all $\theta_j$)
 
 Equivalent to 
 Repeat $\{$
