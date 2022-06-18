@@ -102,11 +102,8 @@ $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$
 $\}$ (Simultaneously update all $\theta_j$)
 
 Equivalent to 
-Repeat $\{$
-$$
-\theta_j := \theta_j - \alpha 
-\frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}
-$$ $\}$ (Simultaneously update all $\theta_j$
+Repeat $\{$ $$\theta_j := \theta_j - \alpha 
+\frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$$ $\}$ (Simultaneously update all $\theta_j$
 
 Vectorically,
 $$
