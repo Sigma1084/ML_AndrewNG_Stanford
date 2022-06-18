@@ -46,14 +46,12 @@ $$
 
 #### Reasons for choosing the cost function
 * $\text{Cost}(h_\theta(x), y) = 0 \text{ if } h_\theta(x) = y$
-* $\text{Cost}(h_\theta(x), y) \to \infin \text{ if } y=0 \text{ and } h_\theta(x) \to 1$
-* $\text{Cost}(h_\theta(x), y) \to \infin \text{ if } y=1 \text{ and } h_\theta(x) \to 0$
+* $\text{Cost}(h_\theta(x), y) \to \infty \text{ if } y=0 \text{ and } h_\theta(x) \to 1$
+* $\text{Cost}(h_\theta(x), y) \to \infty \text{ if } y=1 \text{ and } h_\theta(x) \to 0$
 
 #### Compressed Cost Function
-$$
-\text{Cost}(h_\theta(x), y) =
--ylog(h_\theta(x)) - (1-y)log(1 - h_\theta(x))
-$$
+$$\text{Cost}(h_\theta(x), y) =
+-ylog(h_\theta(x)) - (1-y)log(1 - h_\theta(x))$$
 This compressed cost function is **Convex**
 
 ### Variables
@@ -81,17 +79,16 @@ X\theta = y \text{ holds with low error}
 $$
 
 ### Overall Cost
-$$
-\begin{align*}
+
+$$\begin{align*}
 	J(\theta)
 	&= \frac{1}{m} \sum_{i=1}^m
 		\text{Cost}(h_\theta(x^{(i)}), y^{(i)}) \\
 	&= \frac{1}{m} \sum_{i=1}^m
 		-ylog(h_\theta(x)) - (1-y)log(1 - h_\theta(x))
-\end{align*}
-$$
+\end{align*}$$
 
-To fit parameters $\theta$ : $\underset{\theta} {min} \text{ } J(\theta)$
+To fit parameters $\theta$ : $\underset{\theta} {\min} \text{ } J(\theta)$
 Make a prediction given new $x$: $h_\theta(x) = \frac{1}{1-e^{x^T\theta}}$
 
 
@@ -99,9 +96,8 @@ Make a prediction given new $x$: $h_\theta(x) = \frac{1}{1-e^{x^T\theta}}$
 Use Gradient Desent and repeatedly update $\theta$
 We want to minimize $J(\theta)$ :
 Repeat $\{$
-$$
-\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)
-$$ $\}$ (Simultaneously update all $\theta_j$
+$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$ 
+$\}$ (Simultaneously update all $\theta_j$
 
 Equivalent to 
 Repeat $\{$
@@ -200,8 +196,7 @@ $$
 $$
 
 ## Regularized Linear Regression
-$$
-\begin{align*} 
+$$\begin{align*} 
 	& \text{Repeat}\ \lbrace \newline 
 	& \quad
 		\theta_0 := \theta_0 -
@@ -213,8 +208,7 @@ $$
 		\frac{\lambda}{m}\theta_j \right] 
 	& \quad j \in \lbrace 1, \ 2, ... \ ,n \rbrace \newline 
 	& \rbrace 
-\end{align*}
-$$
+\end{align*}$$
 
 ## Regularized Logistic Regression
 
